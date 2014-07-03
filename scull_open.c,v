@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 head	1.11;
 access;
 symbols;
@@ -6,6 +7,21 @@ locks
 comment	@ * @;
 
 
+=======
+head	1.12;
+access;
+symbols;
+locks
+	root:1.12;
+comment	@ * @;
+
+
+1.12
+date	2014.07.02.21.11.39;	author root;	state Exp;
+branches;
+next	1.11;
+
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 1.11
 date	2014.06.30.17.40.15;	author root;	state Exp;
 branches;
@@ -68,9 +84,15 @@ save address of sculldev into private data of file structure.
 @
 
 
+<<<<<<< HEAD
 1.11
 log
 @corrected revision .
+=======
+1.12
+log
+@changed value of i in for loop according to number of quantums.
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 @
 text
 @#include"header.h"
@@ -86,7 +108,11 @@ int scull_trim(struct sculldev * lsculldev)
 	  prev=lscullqset;
 	  lscullqset=lscullqset->next;
 	  printk(KERN_INFO"freed memory %p\n",lscullqset);
+<<<<<<< HEAD
 	  for(i=0;i<8;i++)
+=======
+	  for(i=0;i<=5;i++)
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 	  {
 		 kfree(lscullqset->data[i]);
 		 printk(KERN_INFO"freed memory data[%i]%p\n",i,lscullqset->data[i]);
@@ -141,6 +167,20 @@ int scull_trim(struct sculldev * lsculldev)
 @
 
 
+<<<<<<< HEAD
+=======
+1.11
+log
+@corrected revision .
+@
+text
+@d14 1
+a14 1
+	  for(i=0;i<8;i++)
+@
+
+
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 1.10
 log
 @*** empty log message ***

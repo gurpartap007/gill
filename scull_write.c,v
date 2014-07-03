@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 head	1.28;
 access;
 symbols;
@@ -6,6 +7,21 @@ locks
 comment	@ * @;
 
 
+=======
+head	1.29;
+access;
+symbols;
+locks
+	root:1.29; strict;
+comment	@ * @;
+
+
+1.29
+date	2014.07.02.21.12.13;	author root;	state Exp;
+branches;
+next	1.28;
+
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 1.28
 date	2014.06.30.17.23.42;	author root;	state Exp;
 branches;
@@ -152,9 +168,17 @@ desc
 @
 
 
+<<<<<<< HEAD
 1.28
 log
 @*** empty log message ***
+=======
+1.29
+log
+@changed value of i to i=i-8 as is again incremented by 1.
+delete printk statement from last.
+change no. of quantums to 14.
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 @
 text
 @#include"header.h"
@@ -220,7 +244,11 @@ void create_qset(struct sculldev *lsculldev,struct scullqset *lscullqset,int noq
 }
 void create_quantums(struct scullqset *lscullqset,int noq)
 {
+<<<<<<< HEAD
    int lv,no=32;
+=======
+   int lv,no=14;
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
    printk(KERN_INFO"function =  %s\n",__func__);
    for(lv=0;lv<=8;lv++)
    {
@@ -273,10 +301,13 @@ noctw=lsculldev->quantum_size;
 
    /*####### Function to Create Quantums ###########*/
    create_quantums(lscullqset,noq);
+<<<<<<< HEAD
    printk(KERN_INFO"address of scullqset= %p\n",lscullqset);
    printk(KERN_INFO"address of scullqset= %p\n",lscullqset->next);
    printk(KERN_INFO"address of scullqset= %p\n",lscullqset->next->next);
    printk(KERN_INFO"address of scullqset= %p\n",lscullqset->next->next->next);
+=======
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
    for(i=0;i<=7;i++)
    {
    if((flag==1)&&(nocr<8))
@@ -293,7 +324,11 @@ flag=1;
 	  if(i==7)
 	  {
 	  lscullqset=lscullqset->next;
+<<<<<<< HEAD
 	  i=0;
+=======
+	  i=i-8;
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 	  }
    }
    //}
@@ -307,13 +342,18 @@ flag=1;
    strcpy((char*)lscullqset->data[6],"india");
    strcpy((char*)lscullqset->data[7],"world");*/
 lscullqset=lsculldev->scullqset;
+<<<<<<< HEAD
 data=malloc(sizeof(char)*8);
+=======
+/*data=malloc(sizeof(char)*8);
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 memset(data,'\0',8);
    for(i=0;i<=7;i++)
    {
 data=(char *)(lscullqset->data[i]);
 
    printk(KERN_INFO"data in quantum[%d]= %s\n",i,data );
+<<<<<<< HEAD
    }
   for(i=0;i<=7;i++)
    {
@@ -322,6 +362,16 @@ data=(char *)(lscullqset->data[i]);
    for(i=0;i<=7;i++)
    {
    printk(KERN_INFO"data in quantum[%d]= %s\n",i, (char*)(lscullqset->next->next->data[i]));
+=======
+   }*/
+  for(i=0;i<=7;i++)
+   {
+   printk(KERN_INFO"data in quantum[%d]= %s\n",i, (char*)(lscullqset->data[i]));
+   }
+  for(i=0;i<=5;i++)
+   {
+   printk(KERN_INFO"data in quantum[%d]= %s\n",i, (char*)(lscullqset->next->data[i]));
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
    }
  /*  for(i=0;i<=7;i++)
    {
@@ -333,6 +383,43 @@ data=(char *)(lscullqset->data[i]);
 @
 
 
+<<<<<<< HEAD
+=======
+1.28
+log
+@*** empty log message ***
+@
+text
+@d64 1
+a64 1
+   int lv,no=32;
+a116 4
+   printk(KERN_INFO"address of scullqset= %p\n",lscullqset);
+   printk(KERN_INFO"address of scullqset= %p\n",lscullqset->next);
+   printk(KERN_INFO"address of scullqset= %p\n",lscullqset->next->next);
+   printk(KERN_INFO"address of scullqset= %p\n",lscullqset->next->next->next);
+d133 1
+a133 1
+	  i=0;
+d147 1
+a147 1
+data=malloc(sizeof(char)*8);
+d154 1
+a154 1
+   }
+d157 1
+a157 1
+   printk(KERN_INFO"data in quantum[%d]= %s\n",i, (char*)(lscullqset->next->data[i]));
+d159 1
+a159 1
+   for(i=0;i<=7;i++)
+d161 1
+a161 1
+   printk(KERN_INFO"data in quantum[%d]= %s\n",i, (char*)(lscullqset->next->next->data[i]));
+@
+
+
+>>>>>>> cf50c18a7a43802397a52020625fd05b67d87346
 1.27
 log
 @*** empty log message ***
